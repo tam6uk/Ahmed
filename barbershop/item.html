@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Барбершоп «Бородинский»</title>
+  <title>Набор для путешествий «Baxter of California»</title>
+  <!-- тайтлы не должны повторяться -->
 </head>
 <body>
   <header class="main-header">
     <div class="container">
       <div class="top-logo">
-        <a href="">
+        <a href="index.html">
+          <!-- не забывай ссылку на главную -->
           <img src="img/logo-header.png" width="111" height="24" alt="Барбершоп «Бородинский»">
         </a>
       </div>
@@ -26,7 +28,7 @@
             <a href="#">Прайс-лист</a>
           </li>
           <li>
-            <a href="#">Магазин</a>
+            <a class="active">Магазин</a>
           </li>
           <li>
             <a href="#">Контакты</a>
@@ -42,54 +44,40 @@
     <h1>Набор для путешествий «Baxter of California»</h1>
     <div class="breadcrumbs">
       <ul>
-        <li><a href="">Глвная</a></li>
-        <li><a href="">Магазин</a></li>
-        <li><a href="">Средства для ухода</a></li>
-        <li><a href="">Набор для путешествий «Baxter of California»</a></li>
+        <li><a href="index.html">Глвная</a></li>
+        <li><a href="shop.html">Магазин</a></li>
+        <li><a href="#">Средства для ухода</a></li>
+        <li>Набор для путешествий «Baxter of California»</li>
       </ul>
     </div>
     <section class="product-content">
       <div class="product-content-left">
-        <figure class="product-img">
-<<<<<<< HEAD
+        <div class="product-img">
           <img src="img/travel-kit.jpg" width="460" height="498" alt="Baxter of California">
-        </figure>
+        </div>
         <div class="product-images">
-          <figure >
-            <img src="img/travel-kit-prev-1.jpg" width="140" height="149" alt="Baxter of California">
-          </figure>
-          <figure >
-              <img src="img/travel-kit-prev-2.jpg" width="140" height="149" alt="Baxter of California">
-          </figure>
-          <figure >
-              <img src="img/travel-kit-prev-3.jpg" width="140" height="149" alt="Baxter of California">
-=======
-          <img src="img/img.jpg" width="460" height="498" alt="Baxter of California">
-        </figure>
-        <div class="product-images">
-          <figure >
-            <img src="img/img.jpg" width="140" height="149" alt="Baxter of California">
-          </figure>
-          <figure >
-              <img src="img/img.jpg" width="140" height="149" alt="Baxter of California">
-          </figure>
-          <figure >
-              <img src="img/img.jpg" width="140" height="149" alt="Baxter of California">
->>>>>>> af95473e405be3d41d039aec7111f85048f65c59
-          </figure>
+          <img src="img/travel-kit-prev-1.jpg" width="140" height="149" alt="Baxter of California">
+          <img src="img/travel-kit-prev-2.jpg" width="140" height="149" alt="Baxter of California">
+          <img src="img/travel-kit-prev-3.jpg" width="140" height="149" alt="Baxter of California">         
         </div>
       </div>
       <div class="product-content-right">
-        <p>есть в наличии</p>
-        <p>Артикул: dexter-ae</p>
+        <div class="product-info">
+            <p>есть в наличии</p>
+            <p><span class="vendor-code">Артикул: dexter-ae</span></p>
+        </div>
+        <!-- класс для артикула -->
+        <!-- общий блок для этих двух p -->
         <p>Travel Kit – необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем для бритья, 
           крем после бритья, шампунь. Набор также может стать отличным подарком.
         </p>
         <div class="btn-buy">
-          <p><span class="price">2 900 РУБ.</span></p>
-          <button class="btn" type="submit">Купить</button>
+          <p class="price">2 900 &#8381;</p>
+          <!-- одна обертка лишняя -->
+          <a href="#" class="btn">Купить</a>
+          <!-- это ссылка -->
         </div>
-        <h3>В набор входят:</h3>
+        <h3 class="txt-caption">В набор входят:</h3>
         <ul>
           <li>Средство для умывания (50 мл)</li>
           <li>Увлажняющий крем (50 мл)</li>
@@ -110,9 +98,10 @@
           </div>
           <div class="footer-social">
             <p>Давайте дружить!</p>
-            <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-            <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-            <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+            <a class="social-btn btn social-btn-vk" href="#">Вконтакте</a>
+            <a class="social-btn btn social-btn-fb" href="#">Фейсбук</a>
+            <a class="social-btn btn social-btn-inst" href="#">Инстаграм</a>
+            <!-- добавь также класс btn -->
           </div>
           <div class="footer-copyright">
             <p>Разработано:</p>
@@ -121,22 +110,21 @@
       </div>
   </footer>
   <div class="login-form popup">
-    <form action="item.html">
-      <h3>ЛИЧНЫЙ КАБИНЕТ</h3>
+    <form action="index.html">
+      <h3 class="txt-caption">Личный кабинет &#8381;</h3>
       <p>Введите пожалуйста свой логин и пароль</p>
       <input type="text" placeholder="Логин">
       <input type="password" placeholder="Пароль">
-      <label ><input type="checkbox"> ЗАПОМНИТЕ МЕНЯ</label>
-      <a href="#">Я ЗАБЫЛ ПАРОЛЬ!</a>
-      <button class="btn" type="submit">ВОЙТИ</button>
+      <div class="login-save">
+        <label><input type="checkbox"> ЗАПОМНИТЕ МЕНЯ</label>
+        <a href="#">Я ЗАБЫЛ ПАРОЛЬ!</a>
+      </div>
+      <button class="btn btn-box" type="submit">ВОЙТИ</button>
+      <!-- где-то здесь есть общий родитель -->
     </form>
   </div>
-<<<<<<< HEAD
-  <div class="map">
-    <img src="img/map.jpg" width="766" height="560" alt="ул. Большая Конюшенная 19">
+  <div class="map popup">
+    <!-- bg и iframe -->
   </div>
-=======
-  <div class="map popup"></div>
->>>>>>> af95473e405be3d41d039aec7111f85048f65c59
 </body>
 </html>

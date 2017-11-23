@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Барбершоп «Бородинский»</title>
+  <title>Прайс-лист «Бородинский»</title>
 </head>
 <body>
   <header class="main-header">
     <div class="container">
       <div class="top-logo">
-        <a href="">
+        <a href="index.html">
           <img src="img/logo-header.png" width="111" height="24" alt="Барбершоп «Бородинский»">
         </a>
       </div>
@@ -23,7 +23,7 @@
             <a href="#">Новости</a>
           </li>
           <li>
-            <a href="#">Прайс-лист</a>
+            <a class="active">Прайс-лист</a>
           </li>
           <li>
             <a href="#">Магазин</a>
@@ -39,49 +39,51 @@
     </div>
   </header>
   <main class="container">
-    <h1>Прайс лист</h1>
+    <h1>Прайс-лист</h1>
     <div class="breadcrumbs">
       <ul>
-        <li><a href="">Глвная</a></li>
-        <li><a href="">Прайс лист</a></li>
+        <li><a href="index.html">Главная</a></li>
+        <li>Прайс-лист</li>
       </ul>
     </div>
-    <h3><span class="lg-txt">ИСТИННО МУЖСКАЯ КЛАССИКА</span></h3>
+    <div><span class="lg-txt">ИСТИННО МУЖСКАЯ КЛАССИКА</span></div>
     <section class="price-info">
       <div class="price-info-left">
-        <h3>МЫ ИСПОЛЬЗУЕМ ТОЛЬКО ЛУЧШИЕ СРЕДСТВА:</h3>
+        <h3 class="txt-caption">МЫ ИСПОЛЬЗУЕМ ТОЛЬКО ЛУЧШИЕ СРЕДСТВА:</h3>
         <ul>
-          <li><a href="">Baxter of California</a></li>
-          <li><a href="">Mr Natty</a></li>
-          <li><a href="">Suavecito</a></li>
-          <li><a href="">Malin+Goetz</a></li>
+          <li><a href="#">Baxter of California</a></li>
+          <li><a href="#">Mr Natty</a></li>
+          <li><a href="#">Suavecito</a></li>
+          <li><a href="#">Malin+Goetz</a></li>
         </ul>
       </div>
       <div class="price-info-right">
-        <h3>ЦЕНЫ НА УСЛУГИ НАШИХ МАСТЕРОВ:</h3>
+        <h3 class="txt-caption">ЦЕНЫ НА УСЛУГИ НАШИХ МАСТЕРОВ:</h3>
         <table>
           <tr>
             <td>СТРИЖКА</td>
-            <td>1500 Р.</td>
+            <td>1500 &#8381;</td>
           </tr>
           <tr>
               <td>СТРИЖКА БОРОДЫ</td>
-              <td>500 Р.</td>
+              <td>500 &#8381;</td>
           </tr>
           <tr>
               <td>НАКРУТКА УСОВ</td>
-              <td>350 Р.</td>
+              <td>350 &#8381;</td>
           </tr>
         </table>
       </div>
-      <h3>НЕСКОЛЬКО СЛОВ О НАС:</h3>
-      <div class="price-info-left">
+    </section>
+    <section class="about-us">
+      <h3 class="txt-caption">НЕСКОЛЬКО СЛОВ О НАС:</h3>
+      <div class="about-us-left">
         <p>Наша парикмахерская занимается исключительно мужскими стрижками. 
           Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа.
-           Мы не работаем на количество, мы делаем качество.
+          Мы не работаем на количество, мы делаем качество.
         </p>
       </div>
-      <div class="price-info-right">
+      <div class="about-us-right">
           <p>Наша мастерская расположена в центре города, поэтому сделать стильную стрижку можно в любое время, 
             даже в обеденный перерыв. 
             Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и свободно!</p>
@@ -98,9 +100,9 @@
           </div>
           <div class="footer-social">
             <p>Давайте дружить!</p>
-            <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-            <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-            <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+            <a class="social-btn btn social-btn-vk" href="#">Вконтакте</a>
+            <a class="social-btn btn social-btn-fb" href="#">Фейсбук</a>
+            <a class="social-btn btn social-btn-inst" href="#">Инстаграм</a>
           </div>
           <div class="footer-copyright">
             <p>Разработано:</p>
@@ -109,22 +111,19 @@
       </div>
   </footer>
   <div class="login-form popup">
-    <form action="price-list">
-      <h3>ЛИЧНЫЙ КАБИНЕТ</h3>
+    <form action="index.html">
+      <h3 class="txt-caption">ЛИЧНЫЙ КАБИНЕТ</h3>
       <p>Введите пожалуйста свой логин и пароль</p>
       <input type="text" placeholder="Логин">
       <input type="password" placeholder="Пароль">
-      <label ><input type="checkbox"> ЗАПОМНИТЕ МЕНЯ</label>
-      <a href="#">Я ЗАБЫЛ ПАРОЛЬ!</a>
-      <button class="btn" type="submit">ВОЙТИ</button>
+      <div class="login-save">
+        <label><input type="checkbox"> ЗАПОМНИТЕ МЕНЯ</label>
+        <a href="#">Я ЗАБЫЛ ПАРОЛЬ!</a>
+      </div>
+      <button class="btn btn-box" type="submit">ВОЙТИ</button>
     </form>
   </div>
-<<<<<<< HEAD
-  <div class="map">
-    <img src="img/map.jpg" width="766" height="560" alt="ул. Большая Конюшенная 19">
+  <div class="map popup">
   </div>
-=======
-  <div class="map popup"></div>
->>>>>>> af95473e405be3d41d039aec7111f85048f65c59
 </body>
 </html>
