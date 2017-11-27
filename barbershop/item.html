@@ -5,14 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Набор для путешествий «Baxter of California»</title>
-  <!-- тайтлы не должны повторяться -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="main-header">
-    <div class="container">
-      <div class="top-logo">
+    <div class="container clearfix">
+      <div class="header-logo">
         <a href="index.html">
-          <!-- не забывай ссылку на главную -->
           <img src="img/logo-header.png" width="111" height="24" alt="Барбершоп «Бородинский»">
         </a>
       </div>
@@ -40,56 +39,56 @@
       </div>
     </div>
   </header>
-  <main class="container">
-    <h1>Набор для путешествий «Baxter of California»</h1>
-    <div class="breadcrumbs">
-      <ul>
-        <li><a href="index.html">Глвная</a></li>
-        <li><a href="shop.html">Магазин</a></li>
-        <li><a href="#">Средства для ухода</a></li>
-        <li>Набор для путешествий «Baxter of California»</li>
-      </ul>
+  <main>
+    <div class="container">
+      <h1>Набор для путешествий «Baxter of California»</h1>
+      <div class="breadcrumbs">
+          <ul>
+            <li><a href="index.html">Глвная</a></li>
+            <li><a href="shop.html">Магазин</a></li>
+            <li><a href="#">Средства для ухода</a></li>
+            <li>Набор для путешествий «Baxter of California»</li>
+          </ul>
+      </div>
+      <section class="product-content clearfix">
+          <div class="product-content-left">
+            <div class="product-img">
+              <img src="img/travel-kit.jpg" width="460" height="498" alt="Baxter of California">
+            </div>
+            <div class="product-images">
+              <img src="img/travel-kit-prev-1.jpg" width="140" height="149" alt="Baxter of California">
+              <img src="img/travel-kit-prev-2.jpg" width="140" height="149" alt="Baxter of California">
+              <img src="img/travel-kit-prev-3.jpg" width="140" height="149" alt="Baxter of California">         
+            </div>
+          </div>
+          <div class="product-content-right">
+            <div class="product-info clearfix">
+                <p>есть в наличии</p>
+                <p class="vendor-code">Артикул: dexter-ae</p>
+            </div>
+            <p>Travel Kit – необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем для бритья, 
+              крем после бритья, шампунь. Набор также может стать отличным подарком.
+            </p>
+            <div class="btn-buy">
+              <p class="price">2 900 &#8381;</p>
+              <!-- одна обертка лишняя -->
+              <a href="#" class="btn">Купить</a>
+              <!-- это ссылка -->
+            </div>
+            <h3 class="txt-caption">В набор входят:</h3>
+            <ul>
+              <li>Средство для умывания (50 мл)</li>
+              <li>Увлажняющий крем (50 мл)</li>
+              <li>Крем для бритья (50 мл)</li>
+              <li>Крем после бритья, шампунь (50 мл)</li>
+              <li>Удобная кожаная косметичка</li>
+            </ul>
+          </div>
+      </section>
     </div>
-    <section class="product-content">
-      <div class="product-content-left">
-        <div class="product-img">
-          <img src="img/travel-kit.jpg" width="460" height="498" alt="Baxter of California">
-        </div>
-        <div class="product-images">
-          <img src="img/travel-kit-prev-1.jpg" width="140" height="149" alt="Baxter of California">
-          <img src="img/travel-kit-prev-2.jpg" width="140" height="149" alt="Baxter of California">
-          <img src="img/travel-kit-prev-3.jpg" width="140" height="149" alt="Baxter of California">         
-        </div>
-      </div>
-      <div class="product-content-right">
-        <div class="product-info">
-            <p>есть в наличии</p>
-            <p><span class="vendor-code">Артикул: dexter-ae</span></p>
-        </div>
-        <!-- класс для артикула -->
-        <!-- общий блок для этих двух p -->
-        <p>Travel Kit – необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем для бритья, 
-          крем после бритья, шампунь. Набор также может стать отличным подарком.
-        </p>
-        <div class="btn-buy">
-          <p class="price">2 900 &#8381;</p>
-          <!-- одна обертка лишняя -->
-          <a href="#" class="btn">Купить</a>
-          <!-- это ссылка -->
-        </div>
-        <h3 class="txt-caption">В набор входят:</h3>
-        <ul>
-          <li>Средство для умывания (50 мл)</li>
-          <li>Увлажняющий крем (50 мл)</li>
-          <li>Крем для бритья (50 мл)</li>
-          <li>Крем после бритья, шампунь (50 мл)</li>
-          <li>Удобная кожаная косметичка</li>
-        </ul>
-      </div>
-    </section>
   </main>
   <footer class="main-footer">
-      <div class="container">
+      <div class="container clearfix">
           <div class="footer-contacts">
                 Барбершоп «Бородинский»<br>
                 Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
@@ -124,7 +123,7 @@
     </form>
   </div>
   <div class="map popup">
-    <!-- bg и iframe -->
+    <iframe src="https://yandex.ru/map-widget/v1/-/CBaj6BCYpC" width="765" height="560" frameborder="0"></iframe>
   </div>
 </body>
 </html>
