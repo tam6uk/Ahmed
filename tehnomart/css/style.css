@@ -1,3 +1,9 @@
+*{
+	box-sizing: border-box;
+}
+figure,p{
+	margin: 0;
+}
 body{
     -background: rgb(178, 177, 218);
 }
@@ -7,7 +13,7 @@ section, div{
 .container{
 	padding: 0 10px;
 	margin: 0 auto;
-	width: 940px;
+	width: 960px;
 }
 .clearfix::after {
     content: "";
@@ -54,7 +60,11 @@ section, div{
 	width: 300px;
 	float: right;
 }
+.header-nav{
+	font-size: 0;
+}
 .header-bottom .header-nav li{
+	font-size: 14px;
 	display: inline-block;
 }
 /*Содержимое сайта*/
@@ -142,8 +152,12 @@ section, div{
 	float: right;
 	width: 300px;
 }
+.breadcrumbs{
+	font-size: 0;
+}
 .breadcrumbs li{
 	display: inline-block;
+	font-size: 14px;
 }
 .filter{
 	width: 220px;
@@ -162,19 +176,30 @@ section, div{
 .catalog-product .product-item:nth-child(3n){
 	margin-right: 0;
 }
+.pagination{
+	font-size: 0;
+}
 .pagination li{
 	display: inline-block;
+	font-size: 14px;
 }
 /*Подвал сайта*/
 .footer-logo{
-	float: left;
 	width: 220px;
+}
+.footer-left{
+	float: left;
+}
+.footer-right{
+	float: right;
 }
 .nav-footer-1,.nav-footer-2{
 	float: right;
+	font-size: 0;
 }
 .nav-footer-1 li, .nav-footer-2 li{
 	display: inline-block;
+	font-size: 14px;
 }
 .footer-middle .adress{
 	float: left;

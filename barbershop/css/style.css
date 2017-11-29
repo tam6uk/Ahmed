@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     -background: rgb(178, 177, 218);
 }
@@ -5,7 +8,7 @@ section, div{
     -outline: 1px solid rgb(0, 0, 0);
 }
 .container{
-    width: 940px;
+    width: 960px;
     margin: 0 auto;
     padding: 0 10px;
 }
@@ -25,9 +28,12 @@ section, div{
 .main-navigation{
     float: left;
     width: 700px;
+    font-size: 0;
+
 }
 .main-navigation li{
     display: inline-block;
+    font-size: 14px;
 }
 .user-block{
     width: 90px;
@@ -64,8 +70,12 @@ section, div{
     width: 300px;
     float: right;
 }
+.breadcrumbs ul {
+    font-size: 0;
+}
 .breadcrumbs ul li{
     display: inline-block;
+    font-size: 14px;
 }
 .product-content-left{
     width: 460px;
@@ -78,10 +88,11 @@ section, div{
 .product-images{
     font-size: 0;
 }
-.product-images img{
+.product-images .img-prev{
     margin-right: 20px;
+    display: inline-block;
 }
-.product-images img:last-child{
+.product-images .img-prev:last-child{
     margin-right: 0;
 }
 .price-info-left{
@@ -127,6 +138,25 @@ section, div{
 }
 .product-info .vendor-code{
     float: right;
+}
+figure,p{
+    margin: 0;
+}
+.appointment-form label{
+    display: block;
+}
+.appointment-form input{
+    width: 100%;
+}
+.appointment-form .form-item{
+    width: 48%;
+    float: left;
+}
+.appointment-form .form-item:nth-child(2n){
+    float: right;
+}
+.price-table{
+    width: 100%;
 }
 /*Подвал сайта*/
 .main-footer{

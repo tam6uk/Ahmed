@@ -101,15 +101,25 @@
         <div class="index-content-right">
           <div class="txt-caption">Записаться</div>
             <p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-            <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
-              <label for="date">Дата</label>
-              <input type="text" id="date" name="date" value="" placeholder="08.10.2017">
-              <label for="time">Время</label>
-              <input type="text" id="time" name="time" value="" placeholder="10:00">
-              <label for="name">Ваше имя</label>
-              <input type="text" id="name" name="name" value="" placeholder="Борода">
-              <label for="phone">Телефон</label>
-              <input type="tel" id="phone" name="phone" value="" placeholder="+7 123 456-78-90">
+            <form class="appointment-form clearfix" action="https://echo.htmlacademy.ru" method="post">
+              <div class="form-block">
+                <div class="form-item">
+                  <label for="date">Дата</label>
+                  <input type="text" id="date" name="date" value="" placeholder="08.10.2017">
+                </div>
+                <div class="form-item">
+                  <label for="time">Время</label>
+                  <input type="text" id="time" name="time" value="" placeholder="10:00">
+                </div>
+                <div class="form-item">
+                  <label for="name">Ваше имя</label>
+                  <input type="text" id="name" name="name" value="" placeholder="Борода">
+                </div>
+                <div class="form-item">
+                  <label for="phone">Телефон</label>
+                  <input type="tel" id="phone" name="phone" value="" placeholder="+7 123 456-78-90">
+                </div>
+              </div>
               <button class="btn btn-box" type="submit">Отправить</button>
             </form>
         </div>
