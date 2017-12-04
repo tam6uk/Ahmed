@@ -21,12 +21,13 @@ section, div{
 .main-header{
     margin-bottom: 60px;
 }
+.header-container{
+    display: flex;
+}
 .header-logo{
-    float: left;
     width: 140px;
 }
 .main-navigation{
-    float: left;
     width: 700px;
     font-size: 0;
 
@@ -37,7 +38,7 @@ section, div{
 }
 .user-block{
     width: 90px;
-    float: right;
+    margin-left: auto;
 }
 /*Содержимое сайта */
 .main-logo{
@@ -46,29 +47,25 @@ section, div{
     margin-bottom: 60px;
 }
 .features{
-    font-size: 0;
+    display: flex;
     margin-bottom: 80px;
+    justify-content: space-between
 }
 .features-item{
     font-size: 14px;
-    display: inline-block;
     width: 300px;
-    margin-right: 20px;
-}
-.features-item:last-child{
-    margin-right: 0px;
 }
 .index-content{
+    display: flex;
+    justify-content: space-between;
     padding: 50px 80px;
     margin-bottom: 36px;
 }
 .index-content-left{
     width: 380px;
-    float: left;
 }
 .index-content-right{
     width: 300px;
-    float: right;
 }
 .breadcrumbs ul {
     font-size: 0;
@@ -77,13 +74,15 @@ section, div{
     display: inline-block;
     font-size: 14px;
 }
+.product-content{
+    display: flex;
+    justify-content: space-between;
+}
 .product-content-left{
     width: 460px;
-    float: left;
 }
 .product-content-right{
     width: 400px;
-    float: right;
 }
 .product-images{
     font-size: 0;
@@ -95,31 +94,44 @@ section, div{
 .product-images .img-prev:last-child{
     margin-right: 0;
 }
+.price-info{
+    display: flex;
+    justify-content: space-between;
+}
 .price-info-left{
     width: 400px;
-    float: left;
 }
 .price-info-right{
     width: 460px;
-    float: right;
 }
-.about-us-left{
+.about-us-content{
+    display: flex;
+}
+.about-us-content p{
     width: 400px;
-    float: left;
 }
-.about-us-right{
+.about-us-content p:last-child{
+    margin-left: auto;
     width: 460px;
-    float: right;
+}
+.products-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.products-container h1{
+    flex-basis: 100%;
+}
+.products-container .breadcrumbs{
+    flex-basis: 100%;
 }
 .sidebar{
-    float: left;
     width: 220px;
 }
 .sidebar label{
     display: block;
 }
 .products{
-    float: right;
     width: 700px;
     font-size: 0px;
 }
@@ -133,11 +145,9 @@ section, div{
 .products-item:nth-child(3n){
     margin-right: 0;
 }
-.product-info p{
-    float: left;
-}
-.product-info .vendor-code{
-    float: right;
+.product-info{
+    display: flex;
+    justify-content: space-between;
 }
 figure,p{
     margin: 0;
@@ -150,10 +160,11 @@ figure,p{
 }
 .appointment-form .form-item{
     width: 48%;
-    float: left;
 }
-.appointment-form .form-item:nth-child(2n){
-    float: right;
+.form-block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .price-table{
     width: 100%;
@@ -164,17 +175,18 @@ figure,p{
     padding-top: 60px;
     padding-bottom: 40px;
 }
+.footer-container{
+    display: flex;
+}
 .footer-contacts{
-    float: left;
     width: 320px;
     margin-right: 60px;
 }
 .footer-social{
-    float: left;
     width: 180px;
 }
 .footer-copyright{
-    float: right;
+    margin-left: auto;
     width: 180px;
 }
 /*Всплывающие окна*/
