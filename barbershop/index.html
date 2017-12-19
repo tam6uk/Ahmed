@@ -7,6 +7,7 @@
   <title>Барбершоп «Бородинский»</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body class="main-page">
   <header class="main-header">
@@ -129,10 +130,10 @@
   <footer class="main-footer">
       <div class="container footer-container">
           <div class="footer-contacts">
-                Барбершоп «Бородинский»<br>
-                Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
-                <a href="#">Как нас найти?</a><br>
-                Телефон: +7 (812) 666-02-66
+            <p>Барбершоп «Бородинский»</p>
+            <p> Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8</p>
+            <a href="#">Как нас найти?</a>
+            <p>Телефон: +7 (812) 666-02-66</p>    
           </div>
           <div class="footer-social">
             <p>Давайте дружить!</p>
@@ -146,21 +147,35 @@
           </div>
       </div>
   </footer>
-  <div class="login-form popup">
-    <form action="index.html">
-      <h3 class="txt-caption">ЛИЧНЫЙ КАБИНЕТ</h3>
-      <p>Введите пожалуйста свой логин и пароль</p>
-      <input type="text" placeholder="Логин">
-      <input type="password" placeholder="Пароль">
-      <div class="login-save">
-        <label><input type="checkbox"> ЗАПОМНИТЕ МЕНЯ</label>
-        <a href="#">Я ЗАБЫЛ ПАРОЛЬ!</a>
-      </div>
-      <button class="btn btn-box" type="submit">ВОЙТИ</button>
-    </form>
+  <div class="bg-popup">
+      <div class="login-form popup">
+          <form action="index.html">
+            <h3 class="txt-caption">ЛИЧНЫЙ КАБИНЕТ</h3>
+            <p>Введите пожалуйста свой логин и пароль</p>
+            <input type="text" placeholder="Логин">
+            <input type="password" placeholder="Пароль">
+            <div class="login-save">
+              <input id="save-me" type="checkbox">
+              <label for="save-me"><span class="form-chbx"></span> ЗАПОМНИТЕ МЕНЯ</label>
+              <a href="#">Я ЗАБЫЛ ПАРОЛЬ!</a>
+            </div>
+            <button class="btn btn-box" type="submit">ВОЙТИ</button>
+            <button class="close" type="button">Закрыть</button>
+          </form>
+        </div>
   </div>
   <div class="map popup">
     <iframe src="https://yandex.ru/map-widget/v1/-/CBaj6BCYpC" width="765" height="560" frameborder="0"></iframe>
   </div>
+  <script>
+    $(document).ready(function(){
+      $(".close").click(function(){
+        $(".bg-popup").css("display","none");
+      })
+      $(".user-block").click(function(){
+        $(".bg-popup").css("display","block");
+      })
+    });
+  </script>
 </body>
 </html>
