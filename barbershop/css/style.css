@@ -1,5 +1,8 @@
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    outline: none;
 }
 body{
     background: rgb(245, 242, 237);
@@ -20,19 +23,25 @@ body{
     margin: 0 auto;
     padding: 0 10px;
 }
+h1{
+    font-size: 30px;
+    margin-bottom: 20px
+}
 /*Шапка сайта*/
 .main-header{
     background: #000;
-    margin-bottom: 60px;
+    height: 72px;
+    margin-bottom: 51px;
 }
 .header-container{
     display: flex;
     justify-content: space-between;
 }
 .header-logo{
-    width: 151px;
+    width: 155px;
     display: flex;
     align-items: center;
+    margin-top: 3px;
 }
 .header-logo a{
     margin-left: 20px;
@@ -54,7 +63,7 @@ body{
     background: #242424;
 }
 .main-navigation a.active {
-    padding-bottom: 21px;
+    padding-bottom: 23px;
     border-bottom: 4px solid #fff;
 }
 .main-header a{
@@ -92,7 +101,8 @@ body{
 .main-logo{
     margin: 0 auto;
     width: 360px;
-    margin-bottom: 67px;
+    margin-top: 60px;
+    margin-bottom: 65px;
 }
 .features{
     display: flex;
@@ -134,7 +144,7 @@ body{
     display: flex;
     justify-content: space-between;
     padding: 45px 80px;
-    margin-bottom: 36px;
+    margin-bottom: 35px;
     padding-bottom: 50px;
 }
 .list-news li{
@@ -191,6 +201,16 @@ a.btn{
     margin-top: 0;
     margin-bottom: 20px;
 }
+.txt-caption-small{
+    font-size: 24px;
+    line-height: 31px;
+    margin-top: 0;
+    margin-bottom: 29px;
+}
+p.txt-caption{
+    font-size: 30px;
+    line-height: 39px;
+}
 .gallery-content{
     line-height: 0;
     border: 7px solid rgb(255, 255, 255);
@@ -225,7 +245,7 @@ a.btn{
     width: 300px;
 }
 .breadcrumbs{
-    margin-bottom: 55px;
+    margin-bottom: 18px;
 }
 .breadcrumbs ul {
     font-size: 0;
@@ -238,10 +258,13 @@ a.btn{
 .breadcrumbs ul li{
     display: inline-block;
     font-size: 14px;
-    margin-right: 24px;
     position: relative;
-    padding-right: 24px; 
+    padding-right: 40px; 
+    margin-bottom: 31px;
 
+}
+.contact-block{
+    margin-bottom: 68px;
 }
 .breadcrumbs ul li:after{
     content: "";
@@ -251,8 +274,8 @@ a.btn{
     background: #000;
     transform: rotate(45deg);
     position: absolute;
-    right: -5px;
-    top: 3px;
+    top: 5px;
+    right: 16px;
 }
 .breadcrumbs ul li:last-child{
     color: #aba9a7;
@@ -264,7 +287,7 @@ a.btn{
 }
 .product-img img, .img-prev img{
     box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 .product-cart .btn-buy{
     text-align: left;
@@ -273,34 +296,42 @@ a.btn{
     text-align: center;
     margin-bottom: 15px;
 }
+.products-item  .btn-buy .btn{
+    padding: 13px 18px;
+    width: 78px;
+}
 .btn-buy .btn{
-    padding: 10px 20px;
+    padding: 13px 18px;
 }
 .price{
     background: #e5e5e5;
     display: inline-block;
-    padding: 10px 33px;
+    padding: 13px 36px;
     margin-right: -4px;
 }
-.product-info{
-    margin-bottom: 40px;
+.products-item .price{
+    width: 109px;
+    padding: 13px 0px;
 }
 .vendor-code{
     color: #aba9a7;
 }
 .product-descriotion{
-    margin-bottom: 40px;
+    margin-bottom: 36px;
+    line-height: 24px;
 }
 .kit-caption{
-    margin: 65px 0 30px 0;
+    margin: 55px 0 21px 0;
+    font-size: 24px;
 }
+
 .kit-list{
     list-style: none;
     padding: 0;
 }
 .kit-list li{
     position: relative;
-    padding-left: 20px; 
+    padding-left: 21px; 
     line-height: 24px;
 }
 .kit-list li::before{
@@ -311,8 +342,15 @@ a.btn{
     background: #000;
     transform: rotate(45deg);
     position: absolute;
-    left: 0;
-    top: 7px;
+    left: 2px;
+    top: 8px;
+}
+.brands{
+    margin-bottom: 34px;    
+}
+.sidebar .product-group label{
+    line-height: 20px;
+    margin-bottom: 17px;
 }
 .brand-list{
     list-style: none;
@@ -325,30 +363,33 @@ a.btn{
 }
 .brand-list li{
     position: relative;
-    padding-left: 20px; 
-    line-height: 24px;
-    margin-bottom: 15px;
+    padding-left: 21px; 
+    line-height: 18px;
+    margin-bottom: 19px;
 }
 .brand-list li::before{
     content: "";
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     background: #000;
     transform: rotate(45deg);
     position: absolute;
-    left: 0;
-    top: 7px;
+    left: 1px;
+    top: 6px;
 }
 .product-content{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 31px;
+    margin-top: 24px;
 }
 .lg-txt{
     font-size: 48px;
     line-height: 48px;
     text-align: center;
-    position: relative
+    position: relative;
+    margin-bottom: 60px;
 }
 .lg-txt::before,.lg-txt::after{
     display: block;
@@ -356,7 +397,7 @@ a.btn{
     content: "";
     width: 160px;
     height: 2px;
-    top:26px;
+    top:24px;
     background: #000;
 }
 .lg-txt::before{
@@ -370,6 +411,7 @@ a.btn{
 }
 .product-content-right{
     width: 400px;
+    padding: 23px 10px;
 }
 .product-images{
     font-size: 0;
@@ -384,7 +426,7 @@ a.btn{
 .price-info{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
 }
 .price-info-left{
     width: 400px;
@@ -392,11 +434,20 @@ a.btn{
 .price-info-right{
     width: 460px;
 }
+.about-us{
+    margin-bottom: 77px;
+}
 .about-us-content{
     display: flex;
 }
+.about-us .txt-caption-small{
+    margin-bottom: 29px;
+}
 .about-us-content p{
     width: 400px;
+    line-height: 24px;
+    margin-top: -2px;
+    padding-right: 10px;
 }
 .about-us-content p:last-child{
     margin-left: auto;
@@ -413,29 +464,34 @@ a.btn{
 .products-container .breadcrumbs{
     flex-basis: 100%;
 }
+.product-group{
+    margin-bottom: 33px;
+}
 .sidebar{
     width: 220px;
 }
 .sidebar label{
     position: relative;
     display: block;
-    padding: 9px 0;
-    padding-left: 45px;
+    margin-bottom: 13px;
+    line-height: 24px;
+    padding-left: 44px;
     
 }
 .sidebar fieldset{
     border:none;
 }
 .sidebar legend{
-    font-size: 21px;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 26px;
 }
-
 .chbx-label{
     position: absolute;
     width: 20px;
     height: 20px;
     border: 2px solid #000;
-    top: 10px;
+    top: 2px;
     left: 0;
 }
 .rd-label{
@@ -443,14 +499,17 @@ a.btn{
     width: 20px;
     height: 20px;
     border: 2px solid #000;
-    top: 10px;
+    top: 1px;
     left: 0;
     border-radius: 50%;
 }
 .sidebar input{
     display: none;
 }
-
+.sidebar .btn{
+    width: 112px;
+    padding: 13px 33px;
+}
 .sidebar #brand-1:checked ~ label[for="brand-1"] .chbx-label::before, 
 .sidebar #brand-1:checked ~ label[for="brand-1"] .chbx-label::after,
 .sidebar #brand-2:checked ~ label[for="brand-2"] .chbx-label::before, 
@@ -498,6 +557,7 @@ a.btn{
 .products{
     width: 700px;
     font-size: 0px;
+    margin-top: 6px;
 }
 .products-item{
     vertical-align: top;
@@ -519,18 +579,20 @@ a.btn{
 }
 
 .products-item .product-name{
-    margin-left: 15px;
-    margin-bottom: 15px;
+    text-transform: none;
+    margin-left: 16px;
+    margin-bottom: 12px;
 }
 .products-list{
-    margin-bottom: 45px;
+    margin-bottom: 27px;
 }
 .products-list .product-img img{
-    margin-bottom: 15px;
+    margin-bottom: 9px;
     box-shadow: none;
 }
 .name{
     display: block;
+    text-transform: uppercase;
 }
 .products-item:nth-child(3n){
     margin-right: 0;
@@ -538,6 +600,7 @@ a.btn{
 .product-info{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 32px;
 }
 figure,p{
     margin: 0;
@@ -563,7 +626,7 @@ figure,p{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 24px 0;
+    margin: 13px 0;
     margin-bottom: 7px;
 }
 .form-block label{
@@ -576,14 +639,20 @@ figure,p{
 .price-table{
     width: 100%;
     border: 2px solid black;
-    border-collapse: collapse
+    border-collapse: collapse;
+    margin-top: 34px;
 }
 .price-table td{
     border: 2px solid rgb(0, 0, 0);
-    padding: 10px 30px;
+    padding: 10px 18px;
+    width: 50%;
 }
 .price-table td:nth-child(2n){
-    text-align: right;
+    text-align: center;
+    padding-left: 23px;
+}
+.pagination{
+    margin-bottom: 49px;
 }
 .pagination ul{
     padding: 0;
@@ -596,17 +665,19 @@ figure,p{
     margin-left: 0;
 }
 .pagination li .btn{
-    padding: 10px 18px;
+    padding: 12px 18px;
 }
 .pagination li a.active{
     background: #fff;
     color: #000;
 }
+.text-form{
+    line-height: 24px;
+}
 /*Подвал сайта*/
 .main-footer{
     color: #fff;
-    margin-top: 65px;
-    padding-top: 60px;
+    padding-top: 59px;
     padding-bottom: 40px;
     background: #252525;
     font-size: 14px
@@ -645,6 +716,7 @@ figure,p{
     width: 140px;
 }
 .footer-copyright .btn{
+    width: 140px;
     padding: 10px 20px;
 }
 .footer .social-btn{
@@ -772,6 +844,7 @@ figure,p{
 .map{
     margin: 0 auto;
     width: 765px;
+    display: none;
 }
 .bg-popup{
     position: absolute;

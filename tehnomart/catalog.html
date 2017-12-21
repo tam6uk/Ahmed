@@ -18,16 +18,15 @@
   <header class="main-header">
     <div class="header-top">
       <div class="container header-container">
-        <div class="header-logo">
-          <a href="index.html">
-            <img src="img/logo-header.png" width="220" height="47" alt="Техномарт">
-          </a>
-        </div>
+            <a class="header-logo">
+              Техномарт
+            </a>
+
         <label class="search">
           <input type="search" placeholder="Поиск">
         </label>
-        <div class="marker">Закладка:0</div>
-        <div class="cart">Корзина:10</div>
+        <div class="marker">Закладка: 0</div>
+        <div class="cart">Корзина: 10</div>
         <div class="orders-btn">
           <a class="btn btn-success" href="#">Оформить заказ</a>
         </div>
@@ -46,8 +45,8 @@
         </div>
         <div class="user-block">
           <div class="user-name">
-            <a href="#" class="btn btn-user">Равшан Джамшутович</a>
-            <button class="btn-signout" type="submit"></button>
+            <a href="#" class="btn-user">Равшан Джамшутович</a>
+            <button class="btn-signout" type="button"></button>
           </div>
           <div class="user-orders">
             <a href="#">Мои заказы</a>
@@ -110,7 +109,7 @@
       </div>
       <div class="contents">
         <div class="filter sidebar">
-          <span>Фильтр:</span>
+          <span class="filter-caption">Фильтр:</span>
           <form action="catalog.html">
             <fieldset class="price-filter">
               <legend>Цена:</legend>
@@ -138,24 +137,24 @@
             <div class="hr"></div>
             <fieldset class="f-brands">
               <legend>Производители:</legend>
-              <label>
-                <input type="checkbox" name="bosch" value="bosch">bosch</label>
-              <label>
-                <input type="checkbox" name="Интерскол" value="Интерскол">Интерскол</label>
-              <label>
-                <input type="checkbox" name="Makita" value="Makita">Makita</label>
-              <label>
-                <input type="checkbox" name="Dewalt" value="Dewalt">Dewalt</label>
-              <label>
-                <input type="checkbox" name="Hitachi" value="Hitachi">Hitachi</label>
+              <input id="br-1" type="checkbox" name="bosch" value="bosch">
+              <input id="br-2" type="checkbox" name="Интерскол" value="Интерскол">
+              <input id="br-3" type="checkbox" name="Makita" value="Makita">
+              <input id="br-4" type="checkbox" name="Dewalt" value="Dewalt">
+              <input id="br-5" type="checkbox" name="Hitachi" value="Hitachi">
+              <label for="br-1"><span class="chbox-br"></span>bosch</label>
+              <label for="br-2"><span class="chbox-br"></span>Интерскол</label>
+              <label for="br-3"><span class="chbox-br"></span>Makita</label>
+              <label for="br-4"><span class="chbox-br"></span>Dewalt</label>
+              <label for="br-5"><span class="chbox-br"></span>Hitachi</label>
             </fieldset>
             <div class="hr"></div>
             <fieldset class="f-battery">
               <legend>Питание:</legend>
-              <label>
-                <input type="radio" name="bat" value="bat1"> Аккумуляторные</label>
-              <label>
-                <input type="radio" name="bat" value="bat2"> Сетевые</label>
+              <input id="bat-1" type="radio" name="bat" value="bat1">
+              <input id="bat-2" type="radio" name="bat" value="bat2">
+              <label for="bat-1"><span class="rd-bry"></span>Аккумуляторные</label>
+              <label for="bat-2"><span class="rd-bry"></span>Сетевые</label>
             </fieldset>
             <button class="btn" type="button">
               Показать
@@ -311,18 +310,18 @@
                 <a class="btn btn-pagination" href="#">3</a>
               </li>
               <li>
-                <a class="btn btn-pagination" href="#">следущая</a>
+                <a class="btn btn-next btn-pagination" href="#">следующая</a>
               </li>
             </ul>
           </nav>
         </div>
       </div>
     </div>
-    <section class="service">
+    <section class="service service-catalog">
       <div class="container">
         <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
-        <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне
-          и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции
+        <p class="service-txt">Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне
+          и камне.<br> Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции
           дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут
           совмещены отбойный молоток и ударная дрель.
         </p>
@@ -361,8 +360,8 @@
               </li>
             </ul>
           </nav>
-          <nav>
-            <ul class="nav-footer-2">
+          <nav class="nav-footer-2">
+            <ul>
               <li>
                 <a href="#">Материалы</a>
               </li>
@@ -381,7 +380,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="container footer-container">
+      <div class="container">
         <div class="footer-copyright">
           <p>© 2010–2017 Компания «Техномарт»
             <br> Все права защищены</p>
@@ -396,7 +395,7 @@
           <a href="mailto:mail@htmlacademy.ru"> mail@htmlacademy.ru</a>
         </div>
         <div class="footer-developer">
-          <p>Разработано-:</p>
+          <p>Разработано-</p>
           <a class="" href="https://htmlacademy.ru">htmlacademy.ru</a>
         </div>
 

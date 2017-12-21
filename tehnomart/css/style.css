@@ -19,7 +19,7 @@ section, div{
 }
 /*Шапка сайта*/
 .main-header{
-	padding-bottom: 60px;
+	padding-bottom: 47px;
 	background: #f3f7f8;
 }
 .header-top{
@@ -31,7 +31,17 @@ section, div{
 }
 .header-top .search{
 	position: relative;
-	margin-left: 20px;
+	margin-left: 18px;
+}
+.header-top input::-moz-placeholder {
+	color: rgb(255, 255, 255);
+	font-family: "Cuprum";
+	font-size: 17px;
+}
+.header-top input::-webkit-input-placeholder {
+	color: rgb(255, 255, 255);
+	font-family: "Cuprum";
+	font-size: 17px;
 }
 .header-top .search::before{
 	content: "";
@@ -46,12 +56,17 @@ section, div{
 	background: transparent;
 	border: none;
 	color: #fff;
-	padding: 12px 25px;
+	padding: 14px 30px;
+	outline: none;
 }
 
 .marker{
 	padding: 10px 20px 10px 30px;
 	position: relative;
+	margin-left: auto;
+	width: 130px;
+	letter-spacing: 0.4px;
+	padding: 9px 20px 10px 24px;
 }
 .marker::before{
 	content: "";
@@ -60,12 +75,12 @@ section, div{
 	height: 17px;
 	background: url(../img/icon-bookmark.png) center no-repeat;
 	position: absolute;
-	left:0;
-	top: 13px;
+	left:-5px;
+	top: 11px;
 }
 .cart{
 	position: relative;
-	padding: 10px 25px 10px 44px;
+	padding: 10px 25px 10px 50px;
     background: #ee3643;
     max-height: 43px;
 }
@@ -76,18 +91,22 @@ section, div{
 	height: 17px;
 	background: url(../img/cart-icon.png) center no-repeat;
 	position: absolute;
-	left:15px;
-	top: 13px;
+	left: 17px;
+    top: 11px;
 }
 .cart-empty{
-	padding: 10px 25px 10px 44px;
-	background: transparent;
+	padding: 9px 25px 10px 49px;
+    letter-spacing: 0.6px;
+    background: transparent;
 }
 .header-top .btn-success{
 	background: #63a63e;
-	padding: 11px 20px;
-	line-height: 21px;
-	border-radius: 0;
+    padding: 11px 0px;
+    line-height: 21px;
+    border-radius: 0;
+    font-size: 17px;
+    text-transform: none;
+    letter-spacing: 1.1px;
 }
 a.btn-success{
 	color: #fff;
@@ -97,34 +116,46 @@ a.btn-success{
 	display: flex;
 	justify-content: space-between;
 }
-.header-top, .header-middle{
+.header-top{
 	margin-bottom: 45px;
+}
+.header-middle{
+	margin-bottom: 38px;
 }
 .header-logo{
 	width: 220px;
+	height: 47px;
+	background: #ee3643;
+	border-bottom: 5px solid #b52933;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Cuprum";
+	font-size: 24px;
+	text-transform: uppercase;
 }
 .search{
 	width: 170px;
 }
-.marker{
-	margin-left: auto;
-	width: 140px;
-}
 .cart{
-	width: 140px;
+	width: 150px;
 }
 .orders-btn{
 	width: 150px;
 	text-align: right;
 }
 .italic-top{
-	width: 300px;
+	width: 260px;
 	font-size: 16px;
 	color: #ee3643;
 	font-style: italic;
+	font-family: "Cuprum";
+	line-height: 23px;
+	margin-left: 52px;
+	margin-top: 3px;
 }
 .header-contact{
-	width: 300px;
+	width: 311px;
 }
 .header-contact .number{
 	border: 3px solid #fff;
@@ -133,8 +164,11 @@ a.btn-success{
 	font-size: 21px;
 	color: #ee3643;
 	text-align: center;
-	padding: 10px;
+	padding: 7px;
+    padding-left: 27px;
 	position: relative;
+	font-family: "Cuprum";
+	margin-bottom: 5px;
 }
 .header-contact.number::before{
 	content: "";
@@ -150,10 +184,14 @@ a.btn-success{
 	width: 300px;
 	line-height: 24px;
 	color: #32425c;
+	font-family: "Cuprum";
+    margin-left: 9px;
 }
 .user-block{
-	width: 300px;
-	text-align: right;
+    width: 300px;
+    text-align: right;
+    height: 45px;
+	
 }
 .user-block a.btn{
 	background: #fff;
@@ -162,22 +200,27 @@ a.btn-success{
 	color: #000;
 	text-decoration: none;
 	font-size: 16px;
-	display: inline-block;
-
+}
+.user-block .btn-signout{
+	width: 40px;
+	background: #fff url(../img/icon-logout.png) no-repeat center;
+}
+.user-name{
+	display: flex;
 }
 .user-name a, .btn-signout{
-	display: inline-block;
     border: none;
-    background: #fff url(../img/icon-logout.png) no-repeat 0 50%;
-    width: 32px;
-    height: 51px;
-    vertical-align: bottom;
-    margin-left: -4px;
+    height: 45px;
     border-radius: 3px;
     outline: none;
-    cursor: pointer;
-	
-
+	cursor: pointer;
+	background: #fff;
+	text-decoration: none;
+	color: #000;
+	display: flex;
+	align-items: center;
+	font-size: 21px;
+	font-family: "Cuprum";
 }
 .user-name a.btn-user{
 	width: 260px;
@@ -185,6 +228,15 @@ a.btn-success{
 	position: relative;
 	font-size: 21px;
 	text-transform: none;
+	padding-left: 47px;
+}
+.user-block a.btn-reg{
+	width: 150px;
+	font-size: 21px;
+	font-family: "Cuprum";
+	text-transform: none;
+	padding-left: 24px;
+	display: inline-block;
 }
 .user-name a.btn-user::before{
 	content: "";
@@ -192,7 +244,8 @@ a.btn-success{
 	width: 20px;
 	height: 20px;
 	background: url(../img/icon-user.png) no-repeat center;
-	top: 15px;
+	top: 12px;
+    left: 14px;
 	position: absolute;
 
 }
@@ -200,6 +253,11 @@ a.btn-success{
 	padding-left: 47px;
 	margin-right: 6px;
 	position: relative;
+	width: 121px;
+	text-transform: none;
+	font-size: 21px;
+	font-family: "Cuprum";
+	display: inline-block;
 }
 .user-block a.btn-signin::before{
 	content: "";
@@ -213,8 +271,8 @@ a.btn-success{
 }
 .user-orders{
 text-align: left;
-margin-top: 10px;
-margin-left: 20px;
+margin-top: 7px;
+margin-left: 18px;
 }
 .user-orders a{
 	color: #32425c;
@@ -240,25 +298,41 @@ margin-left: 20px;
 }
 .header-nav{
 	width: 100%;
-	background: #32425c;
-	padding: 1px 0;
-	border-bottom: 5px solid #293449;
 }
 .header-nav ul{
 	padding: 0;
 	display: flex;
-	justify-content: space-around;
-	margin: 0;
-	margin-bottom: -1px;
 }
 .header-nav a{
-	display: inline-block;
 	color: #fff;
 	font-size: 17px;
 	text-decoration: none;
+	background: #32425c;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 30px;
+	font-family: "Cuprum";
+	position: relative;
 }
-.header-nav li a{
-	padding: 20px 36px;
+.header-nav a::before{
+	display: block;
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 5px;
+	background: #293449;
+
+}
+.header-nav li:first-child a{
+	padding-left: 52px
+}
+.header-nav li:last-child a{
+	padding-left: 36px;
+    padding-right: 55px;
 }
 .header-bottom .header-nav li{
 	font-size: 14px;
@@ -272,16 +346,19 @@ margin-left: 20px;
 	color:#a1a4a8;
 }
 /*Содержимое сайта*/
+.properties{
+	margin-bottom: 34px;
+}
 .properties-top{
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 20px;
-	margin-top: 60px;
+	margin-top: 59px;
 }
 .properties-item{
 	width: 300px;
 	font-size: 14px;
-	padding: 20px 20px;
+	padding: 20px 22px;
 	position: relative;
 }
 .new{
@@ -296,13 +373,16 @@ margin-left: 20px;
 .properties-item a{
 	text-decoration: none;
 	color: #fff;
+	font-size: 24px;
+	font-family: "Cuprum";
 }
 .properties-item .btn-prop{
 	background: rgba(0,0,0,0.1);
     width: 135px;
     text-align: center;
     text-transform: uppercase;
-    border-radius: 3px;
+	border-radius: 3px;
+	margin-left: 3px;
 } 
 .properties-item .btn-prop:hover{
 	background: rgba(0,0,0,0.3);
@@ -314,27 +394,27 @@ margin-left: 20px;
 	line-height: 30px;
 	font-size: 24px;
 	font-weight: bold;
-	margin-bottom: 15px;
+	margin-bottom: 14px;
 }
 .properties-top .item-1{
 	background: #ffbf47 url(../img/pail.png) no-repeat;
-	background-position: 203px 36px;
+	background-position: 213px 31px;;
 }
 .properties-top .item-2{
 	background: #3bbce3 url(../img/drill.png) no-repeat;
-	background-position: 203px 36px
+	background-position: 198px 33px;
 }
 .properties-top .item-3{
 	background: #dc91d8 url(../img/tractor.png) no-repeat;
-	background-position: 203px 36px
+	background-position: 192px 31px;
 }
 .properties-list .item-4{
 	background: #8ed78f url(../img/cart.png) no-repeat;
-	background-position: 203px 36px
+	background-position: 196px 25px;
 }
 .properties-list .item-5{
 	background: #ffc047 url(../img/car.png) no-repeat;
-	background-position: 203px 36px
+	background-position: 192px 32px;
 }
 .slider {
 	position: relative;
@@ -368,17 +448,21 @@ label.btn-radio{
 	font-size: 36px;
 	font-weight: 700;
 	color: #fff;
-	top: 20px;
-	left: 20px;
+	top: 21px;
+    left: 24px;
 	text-transform: uppercase;
+	font-family: "Cuprum";
 }
 .slide-item p{
 	color: #fff;
 	font-size: 18px;
 	line-height: 24px;
 	position: absolute;
-	top: 65px;
-	left: 20px;
+	top: 62px;
+    left: 26px;
+	font-family: "Cuprum";
+	font-weight: 400;
+	letter-spacing: 1px;
 }
 .slide-control label{
 	display: block;
@@ -397,16 +481,16 @@ label.btn-radio{
 	width: 22px;
 	height: 40px;
 	position: absolute;
-	top:110px;
+	top:115px;
 	cursor: pointer;
 }
 .prev{
 	background: url(../img/left.png);
-	left: 23px;
+	left: 25px;
 }
 .next{
 	background: url(../img/right.png);
-	right: 23px;
+	right: 20px;
 }
 .btn{
 	background: #ee3643;
@@ -423,9 +507,8 @@ label.btn-radio{
 .slide-item .btn{
 	width: 195px;
 	position: absolute;
-	bottom: 60px;
-    left: 20px;
-	
+	bottom: 25px;
+    left: 25px;
 }
 .slide-item .btn:hover, .slide-item .btn:active {
 	background: #ca2c37;
@@ -436,11 +519,13 @@ label.btn-radio{
 }
 .popular-type{
 	display: flex;
-	justify-content: space-between;
-	margin-top: 60px;
-	margin-bottom: 20px;
-	padding: 25px;
-	background: #f9f5f0;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 30px 24px 26px 28px;
+    background: #f9f5f0;
+    font-size: 30px;
+    line-height: 30px;
+    font-family: "Cuprum";
 }	
 .popular-type h2{
 	font-size: 30px;
@@ -448,17 +533,22 @@ label.btn-radio{
 	font-weight: normal;
 	text-transform: uppercase;
 }
+.brands .popular-type{
+	padding-left: 24px;
+}
 .slider{
 	width: 620px;
 }
 .properties-list{
 	width: 300px;
+	margin-top: 2px;
 }
 .properties-list .properties-item{
 	margin-bottom: 20px;
 }
 .popular-type .btn{
 	width: 253px;
+	margin-top: -5px;
 }
 .popular-type h2{
 	margin: 0;
@@ -488,9 +578,11 @@ label.btn-radio{
 }
 .product-item .btn{
 	width: 140px;
-	margin: 0 auto;
 	position: relative;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
+	margin-left: 42px;
+    font-family: "PT Sans";
+    font-size: 17px;
 }
 .product-item .btn::after{
 	display: block;
@@ -505,7 +597,7 @@ label.btn-radio{
 	display: block;
 }
 .product-hover{
-	padding: 45px 42px 20px 42px;;
+	padding: 45px 42px 20px 3px;;
     background: rgb(255, 255, 255);
     position: absolute;
 	width: 100%;
@@ -559,14 +651,19 @@ label.btn-radio{
 	line-height: 18px;
 	text-align: center;
 	text-decoration: line-through;
+	font-family: "PT Sans";
+	margin-bottom: 10px;
 }
 .product-name{
 	color: #222;
-	font-size: 18px;
-	text-decoration: none;
-	display: block;
-    padding: 12px;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    padding: 9px 15px 0 14px;
     text-align: center;
+    font-family: "PT Sans";
+	line-height: 20px;
+	margin-bottom: 11px;
 
 }
 .popular-product{
@@ -596,23 +693,47 @@ label.btn-radio{
 	display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-	margin-bottom: 85px;
+	margin-bottom: 66px;
 }
 .brands-item:nth-child(4n){
 	margin-right: 0;
 }
 .service{
-	padding: 60px 0;
+	padding: 37px 0 0 0;
 	background: #f4f7f9;
+	margin-bottom: 51px;
+
 }
-.service h2, .about-us h2{
+.service-text{
+	font-family: "PT Sans";
+	font-size: 13px;
+	line-height: 24px;
+}
+.service h2, .about-us h2, .contact h2{
 	text-transform: uppercase;
 	color: #222;
+	font-family: "Cuprum";
+    font-weight: 400;
+	font-size: 30px;
+	margin-bottom: 24px;
 }
 .service-item{
 	display: none;
-	width: 620px;
-    height: 300px;
+	width: 642px;
+    height: 290px;
+}
+.service-item h3{
+	font-size: 36px;
+	color: #32425c;
+	font-family: "Cuprum";
+	text-transform: uppercase;
+	margin: 9px 0 24px 20px;
+}
+.service-item p{
+	font-size: 13px;
+    font-family: "PT Sans";
+    line-height: 24px;
+    padding: 0 5px 0 20px;
 }
 #service-1:checked ~  .tab-container #tab-1,
 #service-2:checked ~  .tab-container #tab-2,
@@ -621,7 +742,7 @@ label.btn-radio{
 }
 .tabs{
 	display: flex;
-	margin-top: 70px;
+	margin-top: 54px;
 }
 .tabs input[type="radio"]{
 	display: none;
@@ -651,8 +772,10 @@ label.btn-radio{
 	width: 240px;
 	font-size: 21px;
 	line-height: 30px;
-	padding: 16px 24px;
+	padding: 15px 24px;
 	border-bottom: 1px solid #4d637b;
+	font-family: "Cuprum";
+	font-weight: bold;
 }
 #service-1:checked ~  .tabs-nav label[for="service-1"],
 #service-2:checked ~  .tabs-nav label[for="service-2"],
@@ -669,7 +792,7 @@ label.btn-radio{
 }
 #tab-1{
 	background: url(../img/service-1.png) no-repeat;
-    background-position-x: 100%;
+	background-position: 171px 29px;
 }
 #tab-2{
 	background: url(../img/service-2.png) no-repeat;
@@ -685,21 +808,33 @@ label.btn-radio{
 .information{
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 90px;
+	margin-bottom: 86px;
+}
+.information p{
+	line-height: 24px;
+    font-size: 13px;
+	font-family: "PT Sans";
+	margin-top: 24px;
+	margin-bottom: 20px;
 }
 .about-us{
 	width: 540px;
 }
 .about-us .btn{
 	width: 220px;
+	font-family: "Cuprum";
 }
 .list-service{
 	list-style: none;
 	padding: 0;
+	margin-bottom: 36px;
 }
 .list-service li{
-	padding-left: 35px;
+	padding-left: 36px;
 	position: relative;
+	font-family: "Cuprum";
+	font-size: 18px;
+    margin-bottom: 19px;
 }
 .list-service li::before{
 	content: "";
@@ -708,29 +843,36 @@ label.btn-radio{
 	height: 2px;
 	background: #ee3643;
 	left: 0;
-	top: 8px;
+	top: 9px;
 	position: absolute;
 }
 .contact{
 	width: 300px;
 }
+.contact .map{
+	margin: 32px 0 35px 0;
+}
+.contact .btn{
+	font-family: "Cuprum";
+}
 .breadcrumbs{
 	font-size: 0;
 	padding: 0;
 	text-transform: uppercase;
-	margin: 22px 0;
+	margin: 22px 0 20px 0;
 }
 .breadcrumbs li{
 	display: inline-block;
 	font-size: 13px;
 	line-height: 18px;
-	padding-left:43px;
+	padding-left:40px;
 	position: relative;
 }
 .breadcrumbs li a{
 	color: #000;
 	text-decoration: none;
 	cursor: pointer;
+	font-family: "PT Sans";
 }
 .breadcrumbs li::before{
 	content: "";
@@ -739,8 +881,8 @@ label.btn-radio{
 	height: 12px;
 	background: url(../img/icon-right-small.png);
 	position: absolute;
-	top: 3px;
-    left: 22px;
+	top: 2px;
+    left: 18px;
 }
 .breadcrumbs li:first-child{
 	padding: 0;
@@ -751,15 +893,24 @@ label.btn-radio{
 .breadcrumbs li:first-child::before{
 	display: none;
 }
-.tool-name{
+.breadcrumbs li:nth-child(2)::before{
+	left:15px;
+}
+.tool-name h1{
 	background: #f2f6f8;
-	padding: 30px;
+	padding: 26px 0 27px 28px;
+	font-size: 30px;
+	font-family: "Cuprum";
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #32425c;
+	margin-bottom: 0;
 }
 .filter{
 	width: 220px;
 	text-transform: uppercase;
 }
-.filter span{
+.filter .filter-caption{
 	background: #f7f3ec;
 	margin: 20px 0;
 	margin-bottom: 11px;
@@ -865,12 +1016,12 @@ font-size: 0;
 	line-height: 20px;
 	position: relative;
 }
-.f-brands label::before{
+.f-brands .chbox-br{
 	content: "";
 	position: absolute;
 	display: block;
-	width: 20px;
-	height: 20px;
+	width: 23px;
+	height: 23px;
 	border: 2px solid #c5c5c5;
 	border-radius: 2px;
 	left: -1px;
@@ -879,15 +1030,29 @@ font-size: 0;
 .f-brands label:first-of-type{
 	padding-top: 0;
 }
-.f-brands label:first-of-type::before{
+.f-brands label:first-of-type .chbox-br{
 	top:-1px;
 }
-.f-battery label::before{
+.filter #br-1:checked ~ label[for="br-1"] .chbox-br::before,
+.filter #br-3:checked ~ label[for="br-3"] .chbox-br::before,
+.filter #br-2:checked ~ label[for="br-2"] .chbox-br::before,
+.filter #br-4:checked ~ label[for="br-4"] .chbox-br::before,
+.filter #br-5:checked ~ label[for="br-5"] .chbox-br::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 27px;
+    height: 23px;
+    background: url(../img/checkbox-on.png);
+    top: -3px;
+    left: -2px;
+}
+.f-battery .rd-bry{
 	content: "";
 	display: block;
 	position: absolute;
-	width: 15px;
-	height: 15px;
+	width: 25px;
+	height: 25px;
 	border-radius: 50%;
 	border: 4px solid #c5c5c5;
 	left: -1px;
@@ -896,8 +1061,20 @@ font-size: 0;
 .f-battery label:first-of-type{
 	padding-top: 0;
 }
-.f-battery label:first-of-type::before{
+.f-battery label:first-of-type .rd-bry{
 	top:-1px;
+}
+.filter #bat-1:checked ~ label[for="bat-1"] .rd-bry::before,
+.filter #bat-2:checked ~ label[for="bat-2"] .rd-bry::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	background: #c5c5c5;
+    top: 4px;
+    left: 4px;
 }
 .filter .btn{
 	border: none;
@@ -919,22 +1096,26 @@ font-size: 0;
 }
 .sort{
 	background: #f7f3ec;
-	padding: 10px 15px;
+	padding: 10px 18px 10px 18px;
 	font-family: "PT Sans";
 	font-size: 13px;
 	line-height: 18px;
 	text-transform: uppercase;
 	margin: 20px 0;
 	vertical-align: middle;
+	position: relative;
 }
 .sort span{
-	margin-right: 130px;
+	margin-right: 137px;
 }
 .sort a{
 	color: rgba(0, 0, 0, 0.3);
 	text-decoration: none;
 	border-bottom: 1px dashed #ee3643;
-	margin-right: 30px;
+	margin-right: 65px;
+}
+.sort a:nth-of-type(3){
+	margin-right: 0;
 }
 .sort a:hover{
 	color: #000;
@@ -944,20 +1125,28 @@ font-size: 0;
 	border: none;
 	color: #ee3643;
 }
-a.ascending, a.descendingly{
-	border: 8px solid transparent;
-    border-bottom: 13px solid #c5c5c5;
+.sort a.ascending, .sort a.descendingly{
+	border: 6px solid transparent;
+    border-bottom: 11px solid #ee3643;
 	display: inline-block;
 	margin: 0;
+	position: absolute;
+	top: 7px;
+    right: 48px;
+
 }
-a.descendingly{
-	border: 8px solid transparent;
-    border-top: 13px solid #c5c5c5;
+.sort a.descendingly{
+	border-bottom: 11px solid #c5c5c5;
+	 transform: rotate(180deg);
+	 top: 14px;
+	 right: 16px;;
+ 
 }
 .catalog-product{
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	margin-bottom: 32px;
 }
 .pagination{
 	font-size: 0;
@@ -972,10 +1161,14 @@ a.descendingly{
 }
 .pagination .btn{
 	margin-right: 10px;
-	padding: 7px 16px;
+	padding: 6px 14px;
 	background: #fff;
 	color: #000;
 	border: 1px solid #e5e5e5;
+	font-family: "PT Sans";
+}
+.pagination .btn-next{
+	padding: 6px 28px;
 }
 .pagination .btn:hover{
 	border: 1px solid #bdc6ca;
@@ -987,6 +1180,15 @@ a.descendingly{
 	border: 1px solid #ee3643;
 	background: #ee3643;
 	color: #fff;
+}
+.service-txt{
+	font-size: 13px;
+	line-height: 24px;
+	font-family: "PT Sans";
+	padding-bottom: 68px;
+}
+.service-catalog{
+	margin-bottom: 0;
 }
 /*Подвал сайта*/
 footer{
@@ -1013,20 +1215,22 @@ footer{
 }
 .nav-footer-1,.nav-footer-2{
 	font-size: 0;
-	margin-top: 40px;
+	margin-top: 39px;
 	display: flex;
 	justify-content: flex-end;
-    margin-left: 60px;
+}
+.nav-footer-2{
+	margin-top: 37px;
 }
 .nav-footer-1 ul,.nav-footer-2 ul{
 	display: flex;
 	justify-content: flex-end;
-	margin-left: 60px;
 }
 .nav-footer-1 li, .nav-footer-2 li{
 	display: inline-block;
 	font-size: 14px;
 	margin-left: 60px;
+	font-family: "Cuprum";
 }
 .nav-footer-1 li:first-child, .nav-footer-2 li:first-child{
 	margin-left: 0px;
@@ -1049,17 +1253,22 @@ footer{
 	border: none;
 }
 .footer-left .adress{
-	margin: 25px 0 50px 0;
+	margin: 23px 0px 49px 3px;
+	line-height: 24px;
+	font-size: 18px;
+    font-family: "Cuprum";
 }
 .footer-copyright{
-	width: 240px;
-	margin-right: 100px;
-	margin-top: 40px;
+	width: 235px;
+	margin-right: 154px;
+    margin-top: 37px;
     margin-bottom: 38px;
+    font-family: "Cuprum";
+    font-size: 16px;
 }
 .footer-social{
 	width: 240px;
-	margin-right: 20px;
+	margin-right: 12px;
 	font-size: 0;
 	display: flex;
 	align-items: center;
@@ -1084,13 +1293,18 @@ footer{
 .social-btn-vk:active, .social-btn-fb:active, .social-btn-inst:active{
 	background-color: #ee3643
 }
-.main-footer{
-	-margin-top: 90px;
+.footer-bottom .container{
+	display: flex;
+}
+.email{
+	margin-right: 52px;
 }
 .email, .footer-developer{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	font-size: 16px;
+    font-family: "Cuprum";
 }
 .email a, .footer-developer a{
 	color: #ffd180;
@@ -1134,58 +1348,8 @@ footer{
 	margin-top: 40px;
 }
 .label-group input{
-	width: 220px;
-	border: 2px solid #dee3e4;
-	border-radius: 2px;
-	padding: 10px 14px;
-}
-.feadback textarea{
-	border: 2px solid #dee3e4;
-	border-radius: 2px;
-	width: 100%;
-}
-.btn-bottom{
-	padding: 37px 80px;
-	background: #f4f4f4;
-}
-.btn-bottom .btn{
-	border: none;
-	width: 100%;
-}
-.close{
-	font-size: 0;
-    width: 0;
-    border: none;
-    height: 0;
-    background: transparent;
-    position: absolute;
-	top: 5px;
-	right: 5px;
-	outline: none;
-}
-.close::before, .close::after{
-	content: "";
-	display: block;
-	position: absolute;
-	width: 25px;
-	height: 4px;
-	background: #ee3643;
-	top: 10px;
-    right: 5px;
-	border-radius: 2px;
-	transform: rotate(45deg);
-}
-.close::after{
-	transform: rotate(-45deg);
-}
-map{
-	width: 940;
+	width: 220px
 }
 .bg-popup{
-    position: absolute;
-    top:0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.678);
+	display: none;
 }
