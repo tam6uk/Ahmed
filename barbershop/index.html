@@ -96,7 +96,7 @@
                 сб — вс: с 10:00 до 19:00
             </p>
             <div class="btn-group">
-              <a class="btn" href="#">Как проехать</a>
+              <a class="btn map-popup" href="#">Как проехать</a>
               <a class="btn" href="#">Обратная связь</a>
             </div>
         </div>
@@ -164,16 +164,48 @@
           </form>
         </div>
   </div>
-  <div class="map popup">
-    <iframe src="https://yandex.ru/map-widget/v1/-/CBaj6BCYpC" width="765" height="560" frameborder="0"></iframe>
+  <div class="bg-popup-map">
+      <div class="map popup">
+          <iframe src="https://yandex.ru/map-widget/v1/-/CBaj6BCYpC" width="766" height="560" frameborder="0"></iframe>
+          <button class="close-map close" type="button">Закрыть</button>
+        </div>
   </div>
+  
+  <script src="js/jquery-3.2.1.min.js"></script>
   <script>
+    var login = $(".login-form input[name=login]");
+    var password = $(".login-form input[name=password]");
+    var storage = localStorage.getItem("login");
     $(document).ready(function(){
       $(".close").click(function(){
         $(".bg-popup").css("display","none");
+        $(".login-form").removeClass("modal-error");
       })
       $(".user-block").click(function(){
         $(".bg-popup").css("display","block");
+      })
+      $(".map-popup").click(function(){
+        $(".bg-popup-map").css("display","block");
+      })
+      $(".close-map").click(function(){
+        $(".bg-popup-map").css("display","none");
+      })
+      $('html').keydown(function(e){
+        if (e.keyCode == 27) {
+          $(".bg-popup").css("display","none");
+          $(".login-form").removeClass("modal-error");
+        }
+      });
+      $(".login-form form").submit(function(event) {
+        var login = $("input[name=login]");
+        var password = $("input[name=password]");
+        if (!login.val() || !password.val()) {
+          event.preventDefault();
+          $(".login-form").removeClass("modal-error");
+          $(".login-form").addClass("modal-error");
+        } else {
+          localStorage.setItem("login", login.value);
+        }
       })
     });
   </script>

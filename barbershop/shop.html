@@ -62,33 +62,41 @@
           <fieldset class="brands">
             <legend>Производители:</legend>
             <input type="checkbox" id="brand-1" name="brand-1" value="Baxter of California">
-            <input type="checkbox" id="brand-2" name="brand-2" value="American Crew">
-            <input type="checkbox" id="brand-3" name="brand-3" value="Suavecito">
-            <input type="checkbox" id="brand-4" name="brand-4" value="Malin+Goetz">
-            <input type="checkbox" id="brand-5" name="brand-5" value="Murray’s">
-            <input type="checkbox" id="brand-6" name="brand-6" value="American Crew">
             <label for="brand-1">
-              <span class="chbx-label"></span>Baxter of California</label>
+              <span class="chbx-label"></span>Baxter of California
+            </label>
+            <input type="checkbox" id="brand-2" name="brand-2" value="American Crew">
             <label for="brand-2">
-              <span class="chbx-label"></span>Mr Natty</label>
+              <span class="chbx-label"></span>Mr Natty
+            </label>
+            <input type="checkbox" disabled id="brand-3" name="brand-3" value="Suavecito">
             <label for="brand-3">
-              <span class="chbx-label"></span>Suavecito</label>
+              <span class="chbx-label"></span>Suavecito
+            </label>
+            <input type="checkbox" id="brand-4" name="brand-4" value="Malin+Goetz">
             <label for="brand-4">
-              <span class="chbx-label"></span>Malin+Goetz</label>
+              <span class="chbx-label"></span>Malin+Goetz
+            </label>
+            <input type="checkbox" id="brand-5" name="brand-5" value="Murray’s">
             <label for="brand-5">
-              <span class="chbx-label"></span>Murray’s</label>
+              <span class="chbx-label"></span>Murray’s
+            </label>
+            <input type="checkbox" id="brand-6" name="brand-6" value="American Crew">
             <label for="brand-6">
-              <span class="chbx-label"></span>American Crew</label>
+              <span class="chbx-label"></span>American Crew
+            </label>
           </fieldset>
           <fieldset class="product-group">
             <legend>Группы товаров:</legend>
             <input type="radio" id="gr-1" name="gr" value="gr1">
-            <input type="radio" id="gr-2" name="gr" value="gr2">
-            <input type="radio" id="gr-3" name="gr" value="gr3">
             <label for="gr-1">
-              <span class="rd-label"></span> Бритвенные принадлежности</label>
+              <span class="rd-label"></span> Бритвенные принадлежности
+            </label>
+            <input type="radio" id="gr-2" name="gr" value="gr2">
             <label for="gr-2">
-              <span class="rd-label"></span> Средства для ухода</label>
+              <span class="rd-label"></span> Средства для ухода
+            </label>
+            <input type="radio" disabled id="gr-3" name="gr" value="gr3">
             <label for="gr-3">
               <span class="rd-label"></span> Аксессуары</label>
           </fieldset>
@@ -224,11 +232,11 @@
 </footer>
   <div class="bg-popup">
       <div class="login-form popup">
-          <form action="index.html">
+          <form action="">
             <h3 class="txt-caption">ЛИЧНЫЙ КАБИНЕТ</h3>
             <p>Введите пожалуйста свой логин и пароль</p>
-            <input type="text" placeholder="Логин">
-            <input type="password" placeholder="Пароль">
+            <input name="login" type="text" placeholder="Логин">
+            <input name="password" type="password" placeholder="Пароль">
             <div class="login-save">
               <input id="save-me" type="checkbox">
               <label for="save-me"><span class="form-chbx"></span> ЗАПОМНИТЕ МЕНЯ</label>
@@ -239,16 +247,35 @@
           </form>
         </div>
   </div>
-  <div class="map popup">
-    <iframe src="https://yandex.ru/map-widget/v1/-/CBaj6BCYpC" width="765" height="560" frameborder="0"></iframe>
-  </div>
+  <script src="js/jquery-3.2.1.min.js"></script>
   <script>
+    var login = $(".login-form input[name=login]");
+    var password = $(".login-form input[name=password]");
+    var storage = localStorage.getItem("login");
     $(document).ready(function(){
       $(".close").click(function(){
         $(".bg-popup").css("display","none");
+        $(".login-form").removeClass("modal-error");
       })
       $(".user-block").click(function(){
         $(".bg-popup").css("display","block");
+      })
+      $('html').keydown(function(e){
+        if (e.keyCode == 27) {
+          $(".bg-popup").css("display","none");
+          $(".login-form").removeClass("modal-error");
+        }
+      });
+      $(".login-form form").submit(function(event) {
+        var login = $("input[name=login]");
+        var password = $("input[name=password]");
+        if (!login.val() || !password.val()) {
+          event.preventDefault();
+          $(".login-form").removeClass("modal-error");
+          $(".login-form").addClass("modal-error");
+        } else {
+          localStorage.setItem("login", login.value);
+        }
       })
     });
   </script>

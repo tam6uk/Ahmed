@@ -131,16 +131,34 @@
           </form>
         </div>
   </div>
-  <div class="map popup">
-    <iframe src="https://yandex.ru/map-widget/v1/-/CBaj6BCYpC" width="765" height="560" frameborder="0"></iframe>
-  </div>
   <script>
+    var login = $(".login-form input[name=login]");
+    var password = $(".login-form input[name=password]");
+    var storage = localStorage.getItem("login");
     $(document).ready(function(){
       $(".close").click(function(){
         $(".bg-popup").css("display","none");
+        $(".login-form").removeClass("modal-error");
       })
       $(".user-block").click(function(){
         $(".bg-popup").css("display","block");
+      })
+      $('html').keydown(function(e){
+        if (e.keyCode == 27) {
+          $(".bg-popup").css("display","none");
+          $(".login-form").removeClass("modal-error");
+        }
+      });
+      $(".login-form form").submit(function(event) {
+        var login = $("input[name=login]");
+        var password = $("input[name=password]");
+        if (!login.val() || !password.val()) {
+          event.preventDefault();
+          $(".login-form").removeClass("modal-error");
+          $(".login-form").addClass("modal-error");
+        } else {
+          localStorage.setItem("login", login.value);
+        }
       })
     });
   </script>
