@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Набор для путешествий «Baxter of California»</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Барбершоп «Бородинский»</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      </head>
 <body>
   <header class="main-header">
     <div class="container header-container">
@@ -44,7 +46,7 @@
       <h1>Набор для путешествий «Baxter of California»</h1>
       <div class="breadcrumbs">
           <ul>
-            <li><a href="index.html">Глвная</a></li>
+            <li><a href="index.html">Главная</a></li>
             <li><a href="shop.html">Магазин</a></li>
             <li><a href="#">Средства для ухода</a></li>
             <li>Набор для путешествий «Baxter of California»</li>
@@ -68,22 +70,20 @@
                        
             </div>
           </div>
-          <div class="product-content-right">
+          <div class="product-content-right product-cart">
             <div class="product-info">
                 <p>есть в наличии</p>
                 <p class="vendor-code">Артикул: dexter-ae</p>
             </div>
-            <p>Travel Kit – необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем для бритья, 
+            <p class="product-descriotion">Travel Kit – необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем для бритья, 
               крем после бритья, шампунь. Набор также может стать отличным подарком.
             </p>
             <div class="btn-buy">
               <p class="price">2 900 &#8381;</p>
-              <!-- одна обертка лишняя -->
               <a href="#" class="btn">Купить</a>
-              <!-- это ссылка -->
             </div>
-            <h3 class="txt-caption">В набор входят:</h3>
-            <ul>
+            <h3 class="txt-caption kit-caption">В набор входят:</h3>
+            <ul class="kit-list">
               <li>Средство для умывания (50 мл)</li>
               <li>Увлажняющий крем (50 мл)</li>
               <li>Крем для бритья (50 мл)</li>
@@ -95,42 +95,72 @@
     </div>
   </main>
   <footer class="main-footer">
-      <div class="container footer-container">
-          <div class="footer-contacts">
-                Барбершоп «Бородинский»<br>
-                Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
-                <a href="#">Как нас найти?</a><br>
-                Телефон: +7 (812) 666-02-66
-          </div>
-          <div class="footer-social">
-            <p>Давайте дружить!</p>
-            <a class="social-btn btn social-btn-vk" href="#">Вконтакте</a>
-            <a class="social-btn btn social-btn-fb" href="#">Фейсбук</a>
-            <a class="social-btn btn social-btn-inst" href="#">Инстаграм</a>
-            <!-- добавь также класс btn -->
-          </div>
-          <div class="footer-copyright">
-            <p>Разработано:</p>
-            <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
-          </div>
-      </div>
-  </footer>
-  <div class="login-form popup">
-    <form action="index.html">
-      <h3 class="txt-caption">Личный кабинет &#8381;</h3>
-      <p>Введите пожалуйста свой логин и пароль</p>
-      <input type="text" placeholder="Логин">
-      <input type="password" placeholder="Пароль">
-      <div class="login-save">
-        <label><input type="checkbox"> ЗАПОМНИТЕ МЕНЯ</label>
-        <a href="#">Я ЗАБЫЛ ПАРОЛЬ!</a>
-      </div>
-      <button class="btn btn-box" type="submit">ВОЙТИ</button>
-      <!-- где-то здесь есть общий родитель -->
-    </form>
+    <div class="container footer-container">
+        <div class="footer-contacts">
+          <p>Барбершоп «Бородинский»</p>
+          <p> Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8</p>
+          <a href="#">Как нас найти?</a>
+          <p>Телефон: +7 (812) 666-02-66</p>    
+        </div>
+        <div class="footer-social">
+          <p>Давайте дружить!</p>
+          <a class="social-btn btn social-btn-vk" href="#">Вконтакте</a>
+          <a class="social-btn btn social-btn-fb" href="#">Фейсбук</a>
+          <a class="social-btn btn social-btn-inst" href="#">Инстаграм</a>
+        </div>
+        <div class="footer-copyright">
+          <p>Разработано:</p>
+          <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+        </div>
+    </div>
+</footer>
+  <div class="bg-popup">
+      <div class="login-form popup">
+          <form action="index.html">
+            <h3 class="txt-caption">ЛИЧНЫЙ КАБИНЕТ</h3>
+            <p>Введите пожалуйста свой логин и пароль</p>
+            <input type="text" placeholder="Логин">
+            <input type="password" placeholder="Пароль">
+            <div class="login-save">
+              <input id="save-me" type="checkbox">
+              <label for="save-me"><span class="form-chbx"></span> ЗАПОМНИТЕ МЕНЯ</label>
+              <a href="#">Я ЗАБЫЛ ПАРОЛЬ!</a>
+            </div>
+            <button class="btn btn-box" type="submit">ВОЙТИ</button>
+            <button class="close" type="button">Закрыть</button>
+          </form>
+        </div>
   </div>
-  <div class="map popup">
-    <iframe src="https://yandex.ru/map-widget/v1/-/CBaj6BCYpC" width="765" height="560" frameborder="0"></iframe>
-  </div>
+  <script>
+    var login = $(".login-form input[name=login]");
+    var password = $(".login-form input[name=password]");
+    var storage = localStorage.getItem("login");
+    $(document).ready(function(){
+      $(".close").click(function(){
+        $(".bg-popup").css("display","none");
+        $(".login-form").removeClass("modal-error");
+      })
+      $(".user-block").click(function(){
+        $(".bg-popup").css("display","block");
+      })
+      $('html').keydown(function(e){
+        if (e.keyCode == 27) {
+          $(".bg-popup").css("display","none");
+          $(".login-form").removeClass("modal-error");
+        }
+      });
+      $(".login-form form").submit(function(event) {
+        var login = $("input[name=login]");
+        var password = $("input[name=password]");
+        if (!login.val() || !password.val()) {
+          event.preventDefault();
+          $(".login-form").removeClass("modal-error");
+          $(".login-form").addClass("modal-error");
+        } else {
+          localStorage.setItem("login", login.value);
+        }
+      })
+    });
+  </script>
 </body>
 </html>

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Прайс-лист «Бородинский»</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Барбершоп «Бородинский»</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      </head>
 <body>
   <header class="main-header">
     <div class="container header-container">
@@ -51,8 +53,8 @@
       <h1 class="lg-txt">ИСТИННО МУЖСКАЯ КЛАССИКА</h1>
       <section class="price-info">
           <div class="price-info-left">
-            <h3 class="txt-caption">МЫ ИСПОЛЬЗУЕМ ТОЛЬКО ЛУЧШИЕ СРЕДСТВА:</h3>
-            <ul>
+            <h3 class="txt-caption-small">МЫ ИСПОЛЬЗУЕМ ТОЛЬКО<br> ЛУЧШИЕ СРЕДСТВА:</h3>
+            <ul class="brand-list">
               <li><a href="#">Baxter of California</a></li>
               <li><a href="#">Mr Natty</a></li>
               <li><a href="#">Suavecito</a></li>
@@ -60,7 +62,7 @@
             </ul>
           </div>
           <div class="price-info-right">
-            <h3 class="txt-caption">ЦЕНЫ НА УСЛУГИ НАШИХ МАСТЕРОВ:</h3>
+            <h3 class="txt-caption-small">ЦЕНЫ НА УСЛУГИ<br> НАШИХ МАСТЕРОВ:</h3>
             <table class="price-table">
               <tr>
                 <td>СТРИЖКА</td>
@@ -78,7 +80,7 @@
           </div>
       </section>
       <section class="about-us">
-          <h3 class="txt-caption">НЕСКОЛЬКО СЛОВ О НАС:</h3>
+          <h3 class="txt-caption-small">НЕСКОЛЬКО СЛОВ О НАС:</h3>
           <div class="about-us-content">
             <p>Наша парикмахерская занимается исключительно мужскими стрижками. 
               Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа.
@@ -92,40 +94,73 @@
     </div>
   </main>
   <footer class="main-footer">
-      <div class="container footer-container">
-          <div class="footer-contacts">
-                Барбершоп «Бородинский»<br>
-                Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
-                <a href="#">Как нас найти?</a><br>
-                Телефон: +7 (812) 666-02-66
-          </div>
-          <div class="footer-social">
-            <p>Давайте дружить!</p>
-            <a class="social-btn btn social-btn-vk" href="#">Вконтакте</a>
-            <a class="social-btn btn social-btn-fb" href="#">Фейсбук</a>
-            <a class="social-btn btn social-btn-inst" href="#">Инстаграм</a>
-          </div>
-          <div class="footer-copyright">
-            <p>Разработано:</p>
-            <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
-          </div>
-      </div>
-  </footer>
-  <div class="login-form popup">
-    <form action="index.html">
-      <h3 class="txt-caption">ЛИЧНЫЙ КАБИНЕТ</h3>
-      <p>Введите пожалуйста свой логин и пароль</p>
-      <input type="text" placeholder="Логин">
-      <input type="password" placeholder="Пароль">
-      <div class="login-save">
-        <label><input type="checkbox"> ЗАПОМНИТЕ МЕНЯ</label>
-        <a href="#">Я ЗАБЫЛ ПАРОЛЬ!</a>
-      </div>
-      <button class="btn btn-box" type="submit">ВОЙТИ</button>
-    </form>
+    <div class="container footer-container">
+        <div class="footer-contacts">
+          <p>Барбершоп «Бородинский»</p>
+          <p> Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8</p>
+          <a href="#">Как нас найти?</a>
+          <p>Телефон: +7 (812) 666-02-66</p>    
+        </div>
+        <div class="footer-social">
+          <p>Давайте дружить!</p>
+          <a class="social-btn btn social-btn-vk" href="#">Вконтакте</a>
+          <a class="social-btn btn social-btn-fb" href="#">Фейсбук</a>
+          <a class="social-btn btn social-btn-inst" href="#">Инстаграм</a>
+        </div>
+        <div class="footer-copyright">
+          <p>Разработано:</p>
+          <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+        </div>
+    </div>
+</footer>
+  <div class="bg-popup">
+      <div class="login-form popup">
+          <form action="index.html">
+            <h3 class="txt-caption">ЛИЧНЫЙ КАБИНЕТ</h3>
+            <p>Введите пожалуйста свой логин и пароль</p>
+            <input type="text" placeholder="Логин">
+            <input type="password" placeholder="Пароль">
+            <div class="login-save">
+              <input id="save-me" type="checkbox">
+              <label for="save-me"><span class="form-chbx"></span> ЗАПОМНИТЕ МЕНЯ</label>
+              <a href="#">Я ЗАБЫЛ ПАРОЛЬ!</a>
+            </div>
+            <button class="btn btn-box" type="submit">ВОЙТИ</button>
+            <button class="close" type="button">Закрыть</button>
+          </form>
+        </div>
   </div>
-  <div class="map popup">
-    <iframe src="https://yandex.ru/map-widget/v1/-/CBaj6BCYpC" width="765" height="560" frameborder="0"></iframe>
-  </div>
+  <script src="js/jquery.js"></script>
+  <script>
+    var login = $(".login-form input[name=login]");
+    var password = $(".login-form input[name=password]");
+    var storage = localStorage.getItem("login");
+    $(document).ready(function(){
+      $(".close").click(function(){
+        $(".bg-popup").css("display","none");
+        $(".login-form").removeClass("modal-error");
+      })
+      $(".user-block").click(function(){
+        $(".bg-popup").css("display","block");
+      })
+      $('html').keydown(function(e){
+        if (e.keyCode == 27) {
+          $(".bg-popup").css("display","none");
+          $(".login-form").removeClass("modal-error");
+        }
+      });
+      $(".login-form form").submit(function(event) {
+        var login = $("input[name=login]");
+        var password = $("input[name=password]");
+        if (!login.val() || !password.val()) {
+          event.preventDefault();
+          $(".login-form").removeClass("modal-error");
+          $(".login-form").addClass("modal-error");
+        } else {
+          localStorage.setItem("login", login.value);
+        }
+      })
+    });
+  </script>
 </body>
 </html>
