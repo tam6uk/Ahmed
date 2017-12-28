@@ -836,6 +836,7 @@ label.btn-radio{
 .product-item figure{
 	font-size: 0;
 	height: 170px;
+	overflow: hidden;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -846,6 +847,10 @@ label.btn-radio{
 	    -ms-flex-align: center;
 	        align-items: center;
 }
+/*.product-item figure img{
+	width: 100%;
+	height: auto;
+}*/
 .product-item .btn{
 	width: 140px;
 	position: relative;
@@ -994,6 +999,13 @@ label.btn-radio{
 }
 .brands-item:nth-child(4n){
 	margin-right: 0;
+}
+.brands-item figure{
+	overflow: hidden;
+}
+.brands-item figure img{
+	width: 100%;
+	height: auto;
 }
 .service{
 	padding: 37px 0 0 0;
@@ -1322,6 +1334,7 @@ font-size: 0;
 	font-size: 15px;
 	line-height: 20px;
 	position: relative;
+	cursor: pointer;
 }
 .f-brands .chbox-br{
 	content: "";
@@ -1476,7 +1489,7 @@ font-size: 0;
 }
 .pagination{
 	font-size: 0;
-	margin-bottom: 60px;
+	margin-bottom: 50px;
 }
 .pagination ul{
 	padding: 0;
@@ -1484,6 +1497,7 @@ font-size: 0;
 .pagination li{
 	display: inline-block;
 	font-size: 14px;
+	margin-bottom: 10px;
 }
 .pagination .btn{
 	margin-right: 10px;

@@ -462,10 +462,16 @@ p.txt-caption{
     display: none;
   
 }
+.product-img, .img-prev{
+    overflow: hidden;
+}
 .product-img img, .img-prev img{
     -webkit-box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
             box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
     margin-bottom: 18px;
+    width: 100%;
+    height: auto;
+
 }
 .product-cart .btn-buy{
     text-align: left;
@@ -899,7 +905,7 @@ figure,p{
     padding-left: 23px;
 }
 .pagination{
-    margin-bottom: 49px;
+    margin-bottom: 39px;
 }
 .pagination ul{
     padding: 0;
@@ -907,6 +913,7 @@ figure,p{
 .pagination li{
     display: inline-block;
     margin-left: 8px;
+    margin-bottom: 10px;
 }
 .pagination li:first-child{
     margin-left: 0;
